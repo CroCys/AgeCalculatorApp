@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainWindowController">
+
+    <!-- Верхняя часть с меню -->
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <Menu mnemonicParsing="false" text="Database">
+                <MenuItem fx:id="checkFromDBMenuItem" mnemonicParsing="false" text="Check from Database"/>
+                <MenuItem fx:id="saveToDBMenuItem" mnemonicParsing="false" text="Save to Database"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- Центральная часть с основным контентом -->
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <!-- Заголовок -->
+            <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="Date Calculator"/>
+
+            <!-- Первая строка с выбором даты 1 -->
+            <HBox alignment="CENTER" spacing="10">
+                <Label style="-fx-font-size: 18;" text="Date 1:"/>
+                <DatePicker fx:id="datePicker1" prefWidth="200.0"/>
+                <Button fx:id="setTodayButton1" mnemonicParsing="false" style="-fx-font-size: 14;" text="Set Today"/>
+                <Button fx:id="clearButton1" mnemonicParsing="false" style="-fx-font-size: 14;" text="Clear"/>
+            </HBox>
+
+            <!-- Вторая строка с выбором даты 2 -->
+            <HBox alignment="CENTER" spacing="10">
+                <Label style="-fx-font-size: 18;" text="Date 2:"/>
+                <DatePicker fx:id="datePicker2" prefWidth="200.0"/>
+                <Button fx:id="setTodayButton2" mnemonicParsing="false" style="-fx-font-size: 14;" text="Set Today"/>
+                <Button fx:id="clearButton2" mnemonicParsing="false" style="-fx-font-size: 14;" text="Clear"/>
+            </HBox>
+
+            <!-- Кнопка для расчета разницы между датами -->
+            <Button fx:id="calculateButton" alignment="CENTER" mnemonicParsing="false" style="-fx-font-size: 18;"
+                    text="Calculate Difference"/>
+
+            <!-- Место для вывода результата -->
+            <TextField fx:id="resultField" alignment="CENTER" editable="false" prefWidth="400.0"
+                       style="-fx-font-size: 20;"/>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.SavePopupController" spacing="10" alignment="CENTER">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label text="Enter Details" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="First Name:"/>
+        <TextField fx:id="firstNameField" prefWidth="200"/>
+    </HBox>
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Last Name:"/>
+        <TextField fx:id="lastNameField" prefWidth="200"/>
+    </HBox>
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Close" onAction="#handleCloseButtonAction"/>
+        <Button text="Save" onAction="#handleSaveButtonAction"/>
+    </HBox>
+</VBox>
